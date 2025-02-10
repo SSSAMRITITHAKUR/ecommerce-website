@@ -1,0 +1,19 @@
+.blog-card {
+    height: 100%; /* Ensure all cards take equal height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blog-card img {
+    width: 100%;
+    height: 200px; /* Set same height for all images */
+    object-fit: cover; /* Maintain aspect ratio and cover full space */
+  }
+  
+  .blog-card-body {
+    flex: 1; /* Make sure body takes up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  

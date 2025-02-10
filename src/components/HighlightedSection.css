@@ -1,0 +1,15 @@
+.highlighted-section {
+  background: center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 250px 20px;
+  min-height: 700px;
+  position: relative;
+}
+
+.highlighted-section .content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  display: inline-block;
+  border-radius: 10px;
+}

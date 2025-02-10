@@ -1,0 +1,92 @@
+.footer {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+  max-width: 300px; /* ✅ Text width limit ताकि proper alignment रहे */
+}
+
+.footer-columns {
+  display: flex;
+  gap: 100px; /* ✅ Columns के बीच space */
+}
+
+/* ✅ Quick Links और About Right Side */
+.quick-links, .about {
+  text-align: left;
+  min-width: 150px;
+}
+
+.footer h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ✅ Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #007bff;
+}
+
+/* ✅ Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ✅ Social Icons Left में नीचे */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
