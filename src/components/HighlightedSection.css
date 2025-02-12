@@ -1,15 +1,37 @@
+
 .highlighted-section {
-  background: center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 250px 20px;
-  min-height: 700px;
   position: relative;
+  width: 100%;
+  min-height: 500px; /* Adjust height as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  color: white;
 }
 
-.highlighted-section .content {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-  display: inline-block;
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  max-height:2000px;
+}
+
+.content {
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  padding: 20px;
   border-radius: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }

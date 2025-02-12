@@ -1,12 +1,17 @@
 import React from "react";
+import LoginForm from "../components/LoginForm";
+import "./Account.css"; // ✅ CSS import
 
-const Account = () => {
+const AccountPage = () => {
   return (
-    <div className="container mt-5">
-      <h1>Account Page</h1>
+    <div className="account-container">
+      <h2>My Account</h2>
       <p>Manage your account details here.</p>
+      <div className="login-form-wrapper">
+        <LoginForm title="Login to Your Account" />
+      </div>
     </div>
   );
 };
 
-export default Account;
+export default AccountPage;

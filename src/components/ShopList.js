@@ -16,23 +16,14 @@ const ShopList = () => {
   return (
     <div className="container mt-4">
       <div className="row">
-        {products.slice(0, 3).map((product) => (
+        {products.map((product) => (
           <div key={product.id} className="col-md-4 mb-4">
-            <ShopCard image={product.image} title={product.title} price={product.price} />
-          </div>
-        ))}
-      </div>
-      <div className="row">
-        {products.slice(3, 6).map((product) => (
-          <div key={product.id} className="col-md-4 mb-4">
-            <ShopCard image={product.image} title={product.title} price={product.price} />
-          </div>
-        ))}
-      </div>
-      <div className="row">
-        {products.slice(6, 8).map((product) => (
-          <div key={product.id} className="col-md-6 mb-4">
-            <ShopCard image={product.image} title={product.title} price={product.price} />
+            <ShopCard 
+              id={product.id} 
+              image={product.image} 
+              title={product.title} 
+              price={product.price} 
+            />
           </div>
         ))}
       </div>

@@ -1,0 +1,66 @@
+.login-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+  }
+  
+  .login-card:hover {
+    transform: scale(1.02);
+  }
+  
+  h3 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    width: 100%; /* Full width */
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  
+  .remember-me input {
+    margin-right: 5px;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .login-btn:hover {
+    background: linear-gradient(to right, #0056b3, #004494);
+  }
+  
+  .forgot-password {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+  
+  .forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+  

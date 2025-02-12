@@ -1,8 +1,8 @@
-// HighlightedSection.js
 import React from "react";
-import "./HighlightedSection.css"; // Custom CSS
+import Button from "./Button"; // ✅ Import Button
+import "./HighlightedSection.css"; // ✅ Import CSS
 
-const HighlightedSection = ({ backgroundImage }) => {
+const HighlightedSection = ({ title, description, backgroundImage, buttonText, buttonLink }) => {
   return (
     <section
       className="highlighted-section"
@@ -10,11 +10,9 @@ const HighlightedSection = ({ backgroundImage }) => {
     >
       <div className="container">
         <div className="content">
-          <h2>What differentiates you from the competition?</h2>
-          <p>
-            Use this section to talk about it. Don’t forget to talk about the benefits.
-          </p>
-          <button className="btn btn-primary">SHOP NOW</button>
+          <h2>{title}</h2>
+          <p>{description}</p>
+          <Button text={buttonText} link={buttonLink} /> {/* ✅ Using the button component */}
         </div>
       </div>
     </section>

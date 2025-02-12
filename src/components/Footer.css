@@ -21,15 +21,14 @@
   font-size: 14px;
   color: #666;
   margin-top: 5px;
-  max-width: 300px; /* ✅ Text width limit ताकि proper alignment रहे */
+  max-width: 300px; 
 }
 
 .footer-columns {
   display: flex;
-  gap: 100px; /* ✅ Columns के बीच space */
+  gap: 100px; 
 }
 
-/* ✅ Quick Links और About Right Side */
 .quick-links, .about {
   text-align: left;
   min-width: 150px;
@@ -74,7 +73,7 @@
   color: #666;
 }
 
-/* ✅ Social Icons Left में नीचे */
+
 .social-icons {
   margin-top: 15px;
   display: flex;

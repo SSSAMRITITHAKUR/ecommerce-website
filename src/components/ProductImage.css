@@ -1,0 +1,17 @@
+.image-container {
+    position: relative;
+  }
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+  .sale-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+  }
+  

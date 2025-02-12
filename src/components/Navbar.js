@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { FaShoppingCart, FaUser, FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "./Navbar.css";
 
 const CustomNavbar = ({ brandName = "BOTIGA", menuItems = [] }) => {
   return (
@@ -42,43 +42,7 @@ const CustomNavbar = ({ brandName = "BOTIGA", menuItems = [] }) => {
         </Nav>
       </Container>
 
-      <style>
-        {`
-          .brand-name {
-            font-size: 2rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-            color: black;
-          }
-
-          .nav-text {
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: black !important;
-            margin-right: 20px;
-          }
-
-          .nav-icon {
-            font-size: 1.5rem;
-            color: black !important;
-            margin-left: 15px;
-          }
-
-          .nav-text:hover, .nav-icon:hover {
-            color: gray !important;
-          }
-
-          .left-nav {
-            margin-left: 0 !important;
-            padding-left: 20px;
-          }
-
-          .right-icons {
-            display: flex;
-            align-items: center;
-          }
-        `}
-      </style>
+      
     </Navbar>
   );
 };

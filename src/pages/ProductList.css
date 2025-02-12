@@ -1,0 +1,10 @@
+.product-list {
+    text-align: center;
+  }
+  
+  .products-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  

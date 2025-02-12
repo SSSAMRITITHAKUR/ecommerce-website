@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useMemo } from "react";
+import ProductCard from "./ProductCard";
 import "./FeaturedSection.css";
 
-const FeaturedSection = ({ products }) => {
+const FeaturedSection = ({ products = [], onQuickView, onAddToCart }) => {
+  // Memoize product list to prevent unnecessary re-renders
+  const productList = useMemo(() => products, [products]);
+
   return (
     <div className="featured-container">
       <h2 className="section-title">Featured Collection</h2>
@@ -9,32 +13,21 @@ const FeaturedSection = ({ products }) => {
         A powerful headline about your product’s features to give focus to your chosen product collection.
       </p>
 
-      <div className="product-grid">
-        {products.map((product) => (
-          <div key={product.id} className="product-card">
-            <div className="image-container">
-              {product.sale && <span className="sale-badge">Sale</span>}
-              <img src={product.image} alt={product.name} className="product-image" />
-              <button className="quick-view">Quick View</button>
-            </div>
-
-            <div className="product-details">
-              <p className="product-name">{product.name}</p>
-              <p className="product-price">
-                {product.discountedPrice ? (
-                  <>
-                    <span className="original-price">{product.price}</span>
-                    <span className="discount-price">{product.discountedPrice}</span>
-                  </>
-                ) : (
-                  product.price
-                )}
-              </p>
-              <button className="add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-        ))}
-      </div>
+      {/* If no products are available, show a message */}
+      {productList.length === 0 ? (
+        <p className="no-products">No featured products available.</p>
+      ) : (
+        <div className="product-grid">
+          {productList.map((product) => (
+            <ProductCard 
+              key={product.id} 
+              product={product} 
+              onQuickView={onQuickView} 
+              onAddToCart={onAddToCart} 
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
