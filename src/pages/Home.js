@@ -53,7 +53,7 @@ const Home = () => {
     { id: 1, name: "Makeup", image: "pink-compact-powder-with-flower-twig-mirror-makeup-brushes-white-fur-backdrop.jpg" },
     { id: 2, name: "Lipstick", image: "set-vivid-lipsticks.jpg" },
     { id: 3, name: "Bath Products", image: "bath-decoration-with-soap-bottle-towel.jpg" },
-    { id: 4, name: "Treatments", image: "pexels-rethaferguson-3621234.jpg" },
+    { id: 4, name: "Treatments", image: "pink-compact-powder-with-flower-twig-mirror-makeup-brushes-white-fur-backdrop.jpg" },
   ];
 
   // Open Quick View Modal

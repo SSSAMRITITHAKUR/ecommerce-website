@@ -30,9 +30,9 @@ const CustomNavbar = ({ brandName = "BOTIGA", menuItems = [] }) => {
 
         {/* Right Icons */}
         <Nav className="right-icons">
-          <Nav.Link as={Link} to="/search" className="nav-icon">
+          {/*<Nav.Link as={Link} to="/search" className="nav-icon">
             <FaSearch />
-          </Nav.Link>
+          </Nav.Link>*/}
           <Nav.Link as={Link} to="/account" className="nav-icon">
             <FaUser />
           </Nav.Link>
