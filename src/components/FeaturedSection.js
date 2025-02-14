@@ -1,9 +1,11 @@
 import React, { useMemo } from "react";
 import ProductCard from "./ProductCard";
+import { useNavigate } from "react-router-dom";  // Import useNavigate
 import "./FeaturedSection.css";
 
 const FeaturedSection = ({ products = [], onQuickView, onAddToCart }) => {
-  // Memoize product list to prevent unnecessary re-renders
+  const navigate = useNavigate(); // Hook for navigation
+
   const productList = useMemo(() => products, [products]);
 
   return (
@@ -13,7 +15,6 @@ const FeaturedSection = ({ products = [], onQuickView, onAddToCart }) => {
         A powerful headline about your product’s features to give focus to your chosen product collection.
       </p>
 
-      {/* If no products are available, show a message */}
       {productList.length === 0 ? (
         <p className="no-products">No featured products available.</p>
       ) : (
@@ -24,6 +25,7 @@ const FeaturedSection = ({ products = [], onQuickView, onAddToCart }) => {
               product={product} 
               onQuickView={onQuickView} 
               onAddToCart={onAddToCart} 
+              onClick={() => navigate(`/product/${product.id}`, { state: { product } })} // Navigate to product details
             />
           ))}
         </div>

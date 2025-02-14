@@ -1,15 +1,16 @@
 import React from "react";
-import { useCart } from "../context/CartContext"; // Import CartContext
-import { useNavigate } from "react-router-dom"; // For navigation
+import { useCart } from "../context/CartContext"; 
+import { useNavigate } from "react-router-dom"; 
 import "./ShopCard.css";
 
 const ShopCard = ({ id, image, title, price }) => {
   const { addToCart } = useCart();
-  const navigate = useNavigate(); // Navigation hook
+  const navigate = useNavigate(); 
 
-  const handleAddToCart = () => {
-    addToCart({ id, image, title, price }); // Add item to cart
-    navigate("/cart"); // Redirect to Cart Page
+  const handleAddToCart = (e) => {
+    e.stopPropagation(); // ✅ Prevent navigation on button click
+    addToCart({ id, image, title, price }); 
+    navigate("/cart"); 
   };
 
   return (
