@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ShopCard from "./ShopCard";
-
-const products = [
-  { id: 1, title: "Deep Sweep 2% BHA Pore Cleaning Toner", price: 21.00, image: "beauty-self-care-products-arrangement.jpg" },
-  { id: 2, title: "Hydrating Face Moisturizer", price: 25.50, image: "front-view-natural-cream-concept.jpg" },
-  { id: 3, title: "Vitamin C Brightening Serum", price: 30.00, image: "spa-concept-with-salt-mint-lotion-towel.jpg" },
-  { id: 4, title: "Aloe Vera Soothing Gel", price: 18.99, image: "aloe-vera-cosmetic-cream-dark-surface.jpg" },
-  { id: 5, title: "Charcoal Detox Face Mask", price: 15.00, image: "overhead-view-spa-stones-brush-clay-mask-pumice-stone-white-background.jpg" },
-  { id: 6, title: "Organic Lip Balm Pack", price: 12.00, image: "shea-butter-beauty-treatment-arrangement.jpg" },
-  { id: 7, title: "Rose Water Facial Mist", price: 20.50, image: "spa-setting-with-pink-roses-aroma-oil-vintage-style.jpg" },
-  { id: 8, title: "SPF 50+ Sunscreen Lotion", price: 22.99, image: "4399064_2334650.jpg" },
-];
+import axios from "axios";
 
 const ShopList = () => {
+  const [products, setProducts] = useState([]);
   const navigate = useNavigate();
+
+  // ✅ Fetch products from API
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/products");
+        setProducts(response.data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   // ✅ Function to navigate to Product Detail Page
   const handleProductClick = (product) => {
@@ -33,8 +37,8 @@ const ShopList = () => {
           >
             <ShopCard 
               id={product.id} 
-              image={product.image} 
-              title={product.title} 
+              image={product.images.length > 0 ? product.images[0].mediaUrl : "placeholder.jpg"} 
+              title={product.name} 
               price={product.price} 
             />
           </div>
